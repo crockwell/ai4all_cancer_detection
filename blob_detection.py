@@ -5,7 +5,7 @@ import numpy as np
 from common import (find_maxima, read_img, visualize_maxima,
                     visualize_scale_space)
 # ~~START DELETE~~
-from filters import convolve
+from scipy.signal import convolve2d as convolve
 
 # ~~END DELETE~~
 
