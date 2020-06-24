@@ -36,7 +36,7 @@ def gaussian_filter(image, sigma):
     g_1d = np.arange(-k_h, k_h + 1)[:, None]**2
     g_2d = -1 * (g_1d + g_1d.T)
     g_kern = np.exp(g_2d / (2 * sigma**2)) / (2 * np.pi * sigma**2)
-    output = convolve(image, g_kern)
+    output = convolve(image, g_kern, mode='same')
     # ~~END DELETE~~
     return output
 
